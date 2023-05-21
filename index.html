@@ -1,87 +1,335 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- <!--
-	
-        /^\    /^\ 
-       {  O}  {  O} 
-        \ /    \ / 
-        //     //       _------_ 
-       //     //     ./~        ~-_ 
-      / ~----~/     /              \ 
-    /         :   ./       _---_    ~- 
-   |  \________) :       /~     ~\   | 
-   |        /    |      |  :~~\  |   | 
-   |       |     |      |  \___-~    | 
-   |        \ __/`\______\.        ./ 
-    \                     ~-______-~\. 
-    .|                                ~-_ 
-   /_____________________________________~~__
 
-  
-  
-  -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-CN">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="提供各式网站源码,精品商业网站模版免费下载,建站教程和源码评测,为个人站长推荐有价值的好东西资刀客源码,全站资源无水印方便各位直接搬运。坚持每天更新资源绝不停止" />
-<meta name="title" content="提供各式网站源码,精品商业网站模版免费下载,建站教程和源码评测,为个人站长推荐有价值的好东西资刀客源码,全站资源无水印方便各位直接搬运。坚持每天更新资源绝不停止" />
-<title>超好看引导页</title>
-<!-- 引入部分css -->
-<link rel="stylesheet" type="text/css" href="index/normalize.css">
-<link rel="stylesheet" type="text/css" href="index/demo.css">
-<!--必要样式-->
-<link rel="stylesheet" type="text/css" href="index/component.css">
-
-<style type="text/css">
-#Layer1 {position:absolute;	width:100%;	z-index:2;	top: 60%;}
-.STYLE3 {font-size: medium}
-.footer{text-align: center;margin-top: 100px;position: relative;bottom: 10px;}
-.bg{}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lvka-Bot官方网站</title>
+    <meta name="keywords" content="松纸工作室官方网站">
+    <meta name="description" content="松纸工作室基于网络资源二次开发，欢迎访问！">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/jQuery3.5.1.js"></script>
+    <!-- 下架公告css -->
+    <style>
+    html,body {
+        margin: 0;
+        padding: 0;
+        font-family: "Microsoft YaHei";
+    }
+    .wrap-dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .4);
+        z-index: 999;
+    }
+    .dialog {
+        position: relative;
+        margin: 15% auto;
+        width: 300px;
+        background-color: #FFFFFF;
+    }
+    .dialog .dialog-header {
+        height: 20px;
+        padding: 10px;
+        background-color: lightskyblue;
+    }
+    .dialog .dialog-body {
+        height: 90px;
+        padding: 20px;
+    }
+    .dialog .dialog-footer {
+        padding: 8px;
+        background-color: whitesmoke;
+    }
+    .btn {
+        width: 100px;
+        padding: 2px;
+    }
+    .hide {
+        display: none;
+    }
+    .ml50 {
+        margin-left: 50px;
+    }
 </style>
-
+<!-- 下架公告css -->
 </head>
-<body>
 
-<div class="container demo-1" >
-	<div  class="content" >
-		<div id="large-header" class="large-header" style="background-image: url(imgs/bg.jpg);">
-			<canvas id="demo-canvas" width="1590" height="100%"></canvas>
-			<h1 class="main-title">网站引导页<br><span class="STYLE3">分享个人所思所想</span></h1>
-		</div>
-		<div id="Layer1">
-			<nav class="codrops-demos">
-				<a href="https://www.360mb.net">360模板吧</a>
-			<a href="https://www.360mb.net/muban/html5">HTML模板</a>
-				
-			</nav>
-			<!-- 底部 -->
-			<div class="footer">
-				<!-- 友情连接 -->
-				<div>
-					<nav class="codrops-demos">
-						<a href="https://www.360mb.net">友情</a>
-						<a href="https://www.360mb.net">友情</a>
-						<a href="https://www.360mb.net">友情</a>
-						<a href="https://www.360mb.net">友情</a>
-					</nav>
-				</div>
-				<!-- 备案号底部 -->
-				<a>Copyright2021.BY:分享 </a> ICP备88888888号
+<body>
+    <!-- 头部 -->
+    <header class="core hd">
+        <!-- 时间 -->
+        <h1 class="time_econd"></span></h1>
+        <h3><span class="time_moon"></span>&nbsp;&nbsp;<span id="clock"></span>&#128513;</h3>
+    </header>
+    <!-- 主体 -->
+    <section class="core main xf_style">
+        <!-- 头像 -->
+        <div class="tx">
+            <img src="https://383808.xyz/wyzylogo.png" alt="摸摸松纸的脑袋" title="摸摸松纸的脑袋">
+        </div>
+        <!-- 姓名 个签 -->
+        <div class="xf_name">
+            <h2>松纸工作室</h2>
+            <h4 id="xf_txt"></h4>
+        </div>
+        <!-- 图标 （img里面的是透明图是用来转换超链接） -->
+        <div class="xf_ico_link">
+            <ul>
+                <li><a href="https://v.kuaishou.com/TlTrST" target="_blank" rel="noopener noreferrer"><img src="./assets/images/transparent.png"
+                            alt="快手" title="快手"></a></li>
+                <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=JWkT7BdXVe7HfEb1QieoY8iENv5cp8PU&noverify=0&personal_qrcode_source=3" target="_blank" rel="noopener noreferrer"><img src="./assets/images/transparent.png"
+                            alt="QQ" title="QQ"></a></li>
+                            
+                <li><a href="https://blog.383808.xyz/5.html" target="_blank" rel="noopener noreferrer"><img src="./assets/images/transparent.png"
+                            alt="留言" title="留言"></a></li>
+                            <!--  -->
+            </ul>
+        </div>
+        <!-- 介绍 -->
+        <div class="xf_introduce">
+            <p id="xf_type"></p>
+        </div>
+        <!-- 滑动效果 -->
+        <p class="xf_slide">&#xeb6d;</p>
+        <div class="xf_website">
+
+<!-- 
+下架公告备用
+<a class="btn ml50" id="remove" target="_blank" rel="noopener noreferrer">SZ版下载</a>
+<div class="wrap-dialog hide">
+    <div class="dialog">
+        <div class="dialog-header">
+            <span class="dialog-title">下架通知</span>
+        </div>
+        <div class="dialog-body">
+            <span class="dialog-message"></span>
+        </div>
+        <div class="dialog-footer">
+<a href="https://jq.qq.com/?_wv=1027&k=zuwuJtGV" type="button" class="btn" id="confirm" />加群</a>
+            <a type="button" class="btn ml50" id="cancel" />取消</a>
+        </div>
+    </div>
+</div>
+ -->
+             <a href="/mnsz" target="_blank" rel="noopener noreferrer">SZ版下载</a>
+            <a href="/mnkonbu" target="_blank" rel="noopener noreferrer">恐怖版下载</a>
+            <a href="/mnkaton" target="_blank" rel="noopener noreferrer">卡通版下载</a>
+            <a href="/file.html" target="_blank" rel="noopener noreferrer">资源共享</a>
+            <a href="https://game.383808.xyz" target="_blank" rel="noopener noreferrer">在线游戏</a>
+            <a href="/contactus.html" target="_blank" rel="noopener noreferrer">联系我们</a>
+            <a href="https://blog.383808.xyz/5.html" target="_blank" rel="noopener noreferrer">我要留言</a>
+            <a href="https://pay.383808.xyz/" target="_blank" rel="noopener noreferrer">在线赞助</a>
+        </div>
+    </section>
+    <!-- 底部 -->
+    <!-- 访问统计 -->
+    <footer class="core copy">
+        <p>Copyright © 2023 <a href="" target="_blank" rel="noopener noreferrer">松纸工作室</a>版权所有</p>
+                                <br>松纸工作室基于网络资源二次开发
+                                <!-- 当前在线人数 --><br><br><script src="https://time-counter.onmicrosoft.cn/counter.js" async="" id="online-counter" interval="240" api="https://time-counter.onmicrosoft.cn/counter" room="sonzhi"></script> <span style="color: #835C3B;">本站当前在线人数 <span style="color: #E9C2A6;" id="online_user"></span> 人
+<!-- 底部运行天数 -->
+<script>
+	//页面加载完执行下方函数
+	share_data_time();
+	function share_data_time() {
+		//每秒执行一次
+	   window.setTimeout("share_data_time()", 1000);
+	    //网站建立时间
+	    BirthDay = new Date("4/8/2023 00:00:00");
+	    //获取当前时间
+	    today = new Date();
+	    //总豪秒数
+	    timeold = (today.getTime() - BirthDay.getTime());
+	    //总秒数
+	    secondsold = Math.floor(timeold / 1000);
+	    e_daysold = timeold / (24 * 60 * 60 * 1000);
+	    //相差天数
+	    daysold = Math.floor(e_daysold);
+	    e_hrsold = (e_daysold - daysold) * 24;
+	    //相差小时数
+	    hrsold = Math.floor(e_hrsold);
+	    e_minsold = (e_hrsold - hrsold) * 60;
+	    //相差分钟数
+	    minsold= Math.floor(e_minsold);
+	    //相差秒数
+	    seconds = Math.floor((e_minsold - minsold) * 60);
+	    //将所获取的时间拼接到一起，再把值显示到页面
+	    share_time.innerHTML = "本站已安全运行:" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+	}
+ </script>
+<br><span id="share_time" style="color: #E9C2A6; font-weight: bold;"></span>
+<!-- 访问人数 -->
+<br><span style="color: #E9C2A6;">本站总访问量<span id="busuanzi_value_site_pv"></span>次·
+    您是第<span id="busuanzi_value_site_uv"></span>个小伙伴
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    </footer>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".xf_slide").click(function () {
+                $(".xf_website").slideToggle("slow");
+            })
+        })
+    </script>
+    <script src="./assets/js/time.js"></script>
+    <script src="./assets/js/text.js"></script>
+    <script src="./assets/js/fireworks.js"></script>
+    <!-- 统计代码 -->
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"K1mJunycE7iGzYtw",ck:"K1mJunycE7iGzYtw",autoTrack:true,hashMode:true})</script>
+    <!-- 统计代码 -->
+    <!-- 弹窗公告 -->
+    <link rel="stylesheet" href="/assets/css/tc.css" />
+		<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="layer"></div>
+		<div id="globalAd">
+			<div id='hero-img' style="background-color: #1a95ff;background: linear-gradient(to left, #5dadf3 0, #4583ca 100%);">
+			</div>
+			<div id='profile-img'>
+				<img src="toxian.jpg" />
+			</div>
+			<div id='content'>
+				<p style="font-size: 16px;font-weight: bold;">公 告</p>
+				<p>欢迎访问松纸工作室官网！</p>
+				<p>迷你SZ版已更新！全新上架由ZM工坊制作的暗网版迷你，欢迎下载！2023.5.2日起本站下载已启用无限速自创网盘，提供更稳定的下载服务<p>
+				<p>·留言系统开放，欢迎留言！<p>
+				<p>·开放在线游戏，休闲娱乐！<p>
+				<p>·建议收藏该网站，方便下次访问~ </p>
+				<a href="https://blog.383808.xyz/5.html" onClick="redirectUrlToActive();" class="btn btn-default" rel='nofollow'>去留言</a>
+				<a href="https://383808.xyz" onClick="redirectUrlToActive();" class="btn btn-default" rel='nofollow'>知道了</a>
 			</div>
 		</div>
-		
-	</div>
-</div>
+				<script>
+			jQuery.cookie = function(name, value, options) {
+				if(typeof value != 'undefined') {
+					options = options || {};
+					if(value === null) {
+						value = '';
+						options.expires = -1;
+					}
+					var expires = '';
+					if(options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+						var date;
+						if(typeof options.expires == 'number') {
+							date = new Date();
+							var totalTime = 24 * 3600;
+							var hour = date.getHours();
+							var minutes = date.getMinutes();
+							var seconds = date.getSeconds();
+							var pastTime = 3600 * hour + 60 * minutes + seconds;
+							var leftTime = totalTime - pastTime;
+							date.setTime(date.getTime() + (options.expires * leftTime * 1000));
+						} else {
+							date = options.expires;
+						}
+						expires = '; expires=' + date.toUTCString();
+					}
+					var path = options.path ? '; path=' + (options.path) : '';
+					var domain = options.domain ? '; domain=' + (options.domain) : '';
+					var secure = options.secure ? '; secure' : '';
+					document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+				} else {
+					var cookieValue = null;
+					if(document.cookie && document.cookie != '') {
+						var cookies = document.cookie.split(';');
+						for(var i = 0; i < cookies.length; i++) {
+							var cookie = jQuery.trim(cookies[i]);
+							if(cookie.substring(0, name.length + 1) == (name + '=')) {
+								cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+								break;
+							}
+						}
+					}
+					return cookieValue;
+				}
+			};
+			$(function() {
+				var COOKIE_NAME = "erdangjiade";
+				if($.cookie(COOKIE_NAME)) {
+					$(".layer").hide();
+					$("#globalAd").hide();
+				} else {
+					var erdangjiadeH = $(window).height();
+					var erdangjiadeW = $(window).width();
+					$(".layer").show();
+					$("#globalAd").css({
+						'top': erdangjiadeH / 2 - $("#globalAd").height() / 2,
+						'left': erdangjiadeW / 2 - $("#globalAd").width() / 2
+					});
+					$("#globalAd").slideDown(300, function() {
+						setTimeout("closeGloableAd()", '300000');
+					});
+					$.cookie(COOKIE_NAME, "erdangjiade", {
+						path: '/',
+						expires: 1
+					});
+				}
+			});
 
-<div id="div"><h2 class="h111"></h2></div>
+			function closeGlobalAd() {
+				$('#globalAd').hide();
+				$('.layer').hide();
 
-<script src="index/TweenLite.min.js"></script>
-<script src="index/EasePack.min.js"></script>
-<script src="index/rAF.js"></script>
-<script src="index/demo-1.js"></script>
-<!-- 音乐外放地址 -->
-<audio style="width:0px;height:0px;" controls autoplay="autoplay" loop src="" type="audio/mpeg"></audio>
+			}
+
+			function redirectUrlToActive() {
+				$('#globalAd').hide();
+				$('.layer').hide();
+			}
+		</script>
+    <!-- 弹窗公告 -->
+    <!-- 下架公告 -->
+    <script>
+    $(document).ready(function(){
+        $('#remove').click(function(){
+            var message = "迷你世界SZ版暂时下架，将对它进行全面更新，请大家耐心等待上架！具体上架时间未定，点击进入QQ群了解更多资讯～";
+            dialogBox(message,
+                function () {
+                    console.log("confirmed");
+                    // do something
+                },
+                function(){
+                    console.log("canceled");
+                    // do something
+                }
+            );
+        });
+
+    });
+
+    function dialogBox(message, yesCallback, noCallback){
+        if(message){
+            $('.dialog-message').html(message);
+        }
+        // 显示遮罩和对话框
+        $('.wrap-dialog').removeClass("hide");
+        // 确定按钮
+        $('#confirm').click(function(){
+            $('.wrap-dialog').addClass("hide");
+            yesCallback();
+        });
+        // 取消按钮
+        $('#cancel').click(function(){
+            $('.wrap-dialog').addClass("hide");
+            noCallback();
+        });
+    }
+</script>
+<!-- 下架公告 -->
 </body>
-</html>
 
+</html
