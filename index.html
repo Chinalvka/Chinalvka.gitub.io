@@ -1,217 +1,87 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <!--
+	
+        /^\    /^\ 
+       {  O}  {  O} 
+        \ /    \ / 
+        //     //       _------_ 
+       //     //     ./~        ~-_ 
+      / ~----~/     /              \ 
+    /         :   ./       _---_    ~- 
+   |  \________) :       /~     ~\   | 
+   |        /    |      |  :~~\  |   | 
+   |       |     |      |  \___-~    | 
+   |        \ __/`\______\.        ./ 
+    \                     ~-______-~\. 
+    .|                                ~-_ 
+   /_____________________________________~~__
 
-<html>
-
+  
+  
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
-<meta charset="utf-8" />
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="提供各式网站源码,精品商业网站模版免费下载,建站教程和源码评测,为个人站长推荐有价值的好东西资刀客源码,全站资源无水印方便各位直接搬运。坚持每天更新资源绝不停止" />
+<meta name="title" content="提供各式网站源码,精品商业网站模版免费下载,建站教程和源码评测,为个人站长推荐有价值的好东西资刀客源码,全站资源无水印方便各位直接搬运。坚持每天更新资源绝不停止" />
+<title>超好看引导页</title>
+<!-- 引入部分css -->
+<link rel="stylesheet" type="text/css" href="index/normalize.css">
+<link rel="stylesheet" type="text/css" href="index/demo.css">
+<!--必要样式-->
+<link rel="stylesheet" type="text/css" href="index/component.css">
 
-<title>网站维护中</title>
-
-<!--核心样式开始-->
-
-<link rel="stylesheet" href="https://lxmb.oss-cn-beijing.aliyuncs.com/404/tc.css" />
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-<!--核心样式结束-->
+<style type="text/css">
+#Layer1 {position:absolute;	width:100%;	z-index:2;	top: 60%;}
+.STYLE3 {font-size: medium}
+.footer{text-align: center;margin-top: 100px;position: relative;bottom: 10px;}
+.bg{}
+</style>
 
 </head>
-
 <body>
 
-<div class="layer"></div>
-
-<div id="globalAd">
-
-<div id='hero-img' style="background-color: #1a95ff;background: linear-gradient(to left, #5dadf3 0, #4583ca 100%);">
-
+<div class="container demo-1" >
+	<div  class="content" >
+		<div id="large-header" class="large-header" style="background-image: url(imgs/bg.jpg);">
+			<canvas id="demo-canvas" width="1590" height="100%"></canvas>
+			<h1 class="main-title">网站引导页<br><span class="STYLE3">分享个人所思所想</span></h1>
+		</div>
+		<div id="Layer1">
+			<nav class="codrops-demos">
+				<a href="https://www.360mb.net">360模板吧</a>
+			<a href="https://www.360mb.net/muban/html5">HTML模板</a>
+				
+			</nav>
+			<!-- 底部 -->
+			<div class="footer">
+				<!-- 友情连接 -->
+				<div>
+					<nav class="codrops-demos">
+						<a href="https://www.360mb.net">友情</a>
+						<a href="https://www.360mb.net">友情</a>
+						<a href="https://www.360mb.net">友情</a>
+						<a href="https://www.360mb.net">友情</a>
+					</nav>
+				</div>
+				<!-- 备案号底部 -->
+				<a>Copyright2021.BY:分享 </a> ICP备88888888号
+			</div>
+		</div>
+		
+	</div>
 </div>
 
-<div id=''>
-
-<!--头像图片地址-->
-
-<img src="" />
-
-</div>
-
-<div id='content'>
-
-<!--公告修改区域-->
-
-<p style="font-size: 16px;font-weight: bold;">系统公告</p>
-
-<p>网站正在搭建,请您耐心等待.</p>
-<p>您可以通过lvka_bot@outlook.com联系我们.</p>
-
-<a onclick="closeGlobalAd();" class="btn btn-default" rel='nofollow'>我知道了</a>
-
-<a href="https://chinalvka.github.io/Chinalvka.gitub.io/" onclick="redirectUrlToActive();" class="btn btn-default" rel='nofollow'>刷新</a>
-
-<!--公告修改区域-->
-
-</div>
-
-</div>
-
-<!--核心脚本参数-->
-
-<script>
-
-jQuery.cookie = function(name, value, options) {
-
-if(typeof value != 'undefined') {
-
-options = options || {};
-
-if(value === null) {
-
-value = '';
-
-options.expires = -1;
-
-}
-
-var expires = '';
-
-if(options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
-
-var date;
-
-if(typeof options.expires == 'number') {
-
-date = new Date();
-
-var totalTime = 24 * 3600;
-
-var hour = date.getHours();
-
-var minutes = date.getMinutes();
-
-var seconds = date.getSeconds();
-
-var pastTime = 3600 * hour + 60 * minutes + seconds;
-
-var leftTime = totalTime - pastTime;
-
-date.setTime(date.getTime() + (options.expires * leftTime * 1000));
-
-} else {
-
-date = options.expires;
-
-}
-
-expires = '; expires=' + date.toUTCString();
-
-}
-
-var path = options.path ? '; path=' + (options.path) : '';
-
-var domain = options.domain ? '; domain=' + (options.domain) : '';
-
-var secure = options.secure ? '; secure' : '';
-
-document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
-
-} else {
-
-var cookieValue = null;
-
-if(document.cookie && document.cookie != '') {
-
-var cookies = document.cookie.split(';');
-
-for(var i = 0; i < cookies.length; i++) {
-
-var cookie = jQuery.trim(cookies[i]);
-
-if(cookie.substring(0, name.length + 1) == (name + '=')) {
-
-cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-
-break;
-
-}
-
-}
-
-}
-
-return cookieValue;
-
-}
-
-};
-
-$(function() {
-
-var COOKIE_NAME = "erdangjiade";
-
-if($.cookie(COOKIE_NAME)) {
-
-$(".layer").hide();
-
-$("#globalAd").hide();
-
-} else {
-
-var erdangjiadeH = $(window).height();
-
-var erdangjiadeW = $(window).width();
-
-$(".layer").show();
-
-$("#globalAd").css({
-
-'top': erdangjiadeH / 2 - $("#globalAd").height() / 2,
-
-'left': erdangjiadeW / 2 - $("#globalAd").width() / 2
-
-});
-
-$("#globalAd").slideDown(300, function() {
-
-setTimeout("closeGloableAd()", '300000');
-
-});
-
-$.cookie(COOKIE_NAME, "erdangjiade", {
-
-path: '/',
-
-expires: 1
-
-});
-
-}
-
-});
-
-function closeGlobalAd() {
-
-$('#globalAd').hide();
-
-$('.layer').hide();
-
-}
-
-function redirectUrlToActive() {
-
-$('#globalAd').hide();
-
-$('.layer').hide();
-
-}
-
-</script>
-
+<div id="div"><h2 class="h111"></h2></div>
+
+<script src="index/TweenLite.min.js"></script>
+<script src="index/EasePack.min.js"></script>
+<script src="index/rAF.js"></script>
+<script src="index/demo-1.js"></script>
+<!-- 音乐外放地址 -->
+<audio style="width:0px;height:0px;" controls autoplay="autoplay" loop src="" type="audio/mpeg"></audio>
 </body>
-
 </html>
 
