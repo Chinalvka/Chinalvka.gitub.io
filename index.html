@@ -19,41 +19,6 @@
   </body>
 <html>
 
-
-<!DOCTYPE html>
-<html lang="en">
- 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
- 
-<body>
-    <div class="box"></div>
-    <script>
-        function getTime() {
-            var date = new Date();
-            var year = date.getFullYear(); //获取年份
-            var month = date.getMonth() + 1; //获取月份
-            var day = date.getDate(); //获取日期
-            var hour = date.getHours(); //获取小时
-            hour = hour < 10 ? '0' + hour : hour;
-            var minute = date.getMinutes(); // 获取分
-            minute = minute < 10 ? '0' + minute : minute;
-            var seconds = date.getSeconds(); //获取秒
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
-        }
- 
-        setInterval(function() {
-            document.querySelector('.box').innerHTML = getTime();
-        }, 1000)
-    </script>
-</body>
-</html>
-
 </head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
@@ -277,4 +242,37 @@ WeChat(非微信)公众号:lvka-Bot Operations Group
 </div>
 </div>
 
-网站版权归属于 lvka-Bot运营组 所有</br>©lvka-Bot运营组&梦幻网络工作室</br>备案号:2023GoogleCloudTW415</br>360安全中心&360鲲鹏引擎&火绒安全软件企业版 提供网站/服务器安全保护</br>当前时间:无相应运行环境</br>网站累计访问量:11496(截止至2023.5.26)</br>作成时间:2023年5月21日13:14
+网站版权归属于 lvka-Bot运营组 所有</br>©lvka-Bot运营组&梦幻网络工作室</br>备案号:2023GoogleCloudTW415</br>360安全中心&360鲲鹏引擎&火绒安全软件企业版 提供网站/服务器安全保护</br>网站累计访问量:11496(截止至2023.5.26)</br>作成时间:2023年5月21日13:14</br>当前时间:
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+ 
+<body>
+    <div class="box"></div>
+    <script>
+        function getTime() {
+            var date = new Date();
+            var year = date.getFullYear(); //获取年份
+            var month = date.getMonth() + 1; //获取月份
+            var day = date.getDate(); //获取日期
+            var hour = date.getHours(); //获取小时
+            hour = hour < 10 ? '0' + hour : hour;
+            var minute = date.getMinutes(); // 获取分
+            minute = minute < 10 ? '0' + minute : minute;
+            var seconds = date.getSeconds(); //获取秒
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
+        }
+ 
+        setInterval(function() {
+            document.querySelector('.box').innerHTML = getTime();
+        }, 1000)
+    </script>
+</body>
+</html>
