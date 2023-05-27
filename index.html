@@ -24,7 +24,7 @@
  </head>
 <body>
   <div class="container">
-    <h1>当前时间</h1>
+    <h3>当前时间</h3>
     <p id="time"></p>
     <p id="countdown"></p>
     <span class="dots"></span>
@@ -44,17 +44,7 @@
 
       // 将时间显示在页面中
       document.getElementById("time").innerHTML = hours + ":" + minutes + ":" + seconds;
-
-      // 计算距离过年还有多少天
-      var thisYear = now.getFullYear();
-      var nextYear = thisYear + 1;
-      var newYear = new Date(nextYear, 0, 1);
-      var days = Math.ceil((newYear.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
-
-      // 将距离过年还有多少天显示在页面中
-      document.getElementById("countdown").innerHTML = "距离过年还有 " + days + " 天";
-    }
-
+      
     // 每秒更新一次时间
     setInterval(updateTime, 1000);
   </script>
@@ -253,7 +243,7 @@ WeChat(非微信)公众号:lvka-Bot Operations Group
 【权限不足】您没有执行相应操作的权限.权限从高到低依次为:律卡、lvka-Bot工作室、梦幻网络工作室、系统管理员、群主、Bot群管理员、管理员、普通成员,请查看您属于哪一类.
 【无法连接服务器,请重新登录】这可能是由于您的网络不稳定导致的,请查看您的网络连接情况或稍候再试.若无效,请联系系统管理员.
 【终端设备版本过低】请检查您的设备是否受支持.Windows要求Win7 x86及以上,Android要求及7.0 x86以上,iOS要求9.0及以上,HarmonyOS要求2.0及以上,其它操作系统暂不支持.
-【终端软件版本过低】请检查您的QQ版本是否受支持,要求为2021年42月以后的版本.
+【终端软件版本过低】请检查您的QQ版本是否受支持,要求为2021年12月以后的版本.
 【由于您多次存在严重违反用户协议或者法律法规的行为,您的账号已被禁用Bot至2029年12月31日23:59】这是您多次不顾提示和警告且存在严重违规/违法行为,经人工3次核实违规行为属实,对您的账号实行最长期限的禁用处理.此违规行为一旦被确认无法通过包含申诉在内的任何方式提前解封,只能等待到期自动解除.请您遵守《Bot用户协议》和您所在国家/地区的法律法规!
 【账号不存在】这是由于您存在特别严重的违反用户协议或者法律法规的行为,对您的lvka-Bot账号实行永久删除处理.此操作为人工5次核实,一旦实行操作不可逆!
 【Warning!Please stop the virtual environment immediately.】这是您使用虚拟机导致的,请您在实体机使用Bot.
