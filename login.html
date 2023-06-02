@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<title>登录</title>
+
+<style> 
+
+  * {
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+body {
+
+min-height: 100vh;
+
+background: linear-gradient(#03a9f4, #03a9f4 10%, #fff 50%, #fff 100%);
+
+}
+
+.card_yuan {
+
+position: relative;
+
+top: 30%;
+
+left: -25%;
+
+transform: translate(-150%, -50%);
+
+width: 200px;
+
+height: 200px;
+
+background-color: #e7609e;
+
+border-radius: 50%;
+
+z-index: 1;
+
+animation: float 5s ease-in-out infinite;
+
+}
+
+.card_yuan:before {
+
+content: "";
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 120%;
+
+height: 120%;
+
+background-color: #2ec3e7;
+
+border-radius: 50%;
+
+transform: translate(160%, 120%);
+
+z-index: 1;
+
+}
+
+.card_yuan:after {
+
+content: "";
+
+position: absolute;
+
+bottom: 0;
+
+right: 0;
+
+width: 90%;
+
+height: 90%;
+
+margin-bottom: 0px;
+
+background-color: #b28fce;
+
+border-radius: 50%;
+
+transform: translate(170%, -130%);
+
+z-index: 1;
+
+}
+
+@keyframes float {
+
+0% {
+
+transform: translateY(0);
+
+}
+
+50% {
+
+transform: translateY(-20px);
+
+}
+
+100% {
+
+transform: translateY(0);
+
+}
+
+}
+
+#box_container {
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+transform: translate(0%, 0%);
+
+width: 100%;
+
+height: 100vh;
+
+background: rgba(0, 0, 0, 0);
+
+backdrop-filter: blur(15px);
+
+border-radius: 0px;
+
+z-index: 9;
+
+}
+
+.card_dl {
+
+position: relative;
+
+top: 20%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+width: 80%;
+
+height: 300px;
+
+background: rgba(0, 0, 0, 0.1);
+
+border-top: 1px solid rgba(255, 255, 255, 0.55);
+
+border: 1px solid rgba(255, 255, 255, 0.25);
+
+border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+backdrop-filter: blur(25px);
+
+border-radius: 20px;
+
+z-index: 999;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+.card_dl p{
+
+  top:50%;
+
+  left:50%;
+
+  color: #cdecfb;
+
+  font-size:10vw;
+
+  font-weight:900;
+
+  transform: translate(-105px, -20px);
+
+  }
+
+input[type="text"], input[type="password"] {
+
+position: relative;
+
+top: 50%; 
+
+left: 45.5%;
+
+width: 80%;
+
+padding: 10px;
+
+margin: 15px;
+
+border-radius: 5px;
+
+border: none;
+
+background: rgba(255, 255, 255, 0.5);
+
+transform: translate(-50%, -100px);
+
+font-size: 1.2rem;
+
+color: #333;
+
+}
+
+button {
+
+position: relative;
+
+top: 50%; 
+
+left: 50%;
+
+width:60%;
+
+padding: 5px;
+
+border-radius: 5px;
+
+border: none;
+
+transform: translate(-50%, -70px);
+
+background: rgba(3, 169, 244, 0.5);
+
+color: #fff;
+
+font-size: 1.2rem;
+
+cursor: pointer;
+
+}
+
+button:hover {
+
+background: rgba(333, 169, 244, 0.5);
+
+}
+
+#yiyan{
+
+  width:100%;
+
+  font-size:3.3vw;
+
+  font-weight:900;
+
+  color:#fff;
+
+  top:50%; 
+
+  left:50%;
+
+  transform: translate(25px, -55px);
+
+  }
+
+   #slide-kp {
+
+  position: fixed;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 0;
+
+  height: 0;
+
+  padding: 0;
+
+  background: linear-gradient(#03a9f4, #03a9f4 10%, #fff 50%, #fff 100%);
+
+  border-radius: 20px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  transition: all 0.3s ease-in-out;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+  font-size: 20px;
+
+  font-weight: 900;
+
+  opacity: 0;
+
+  z-index: 999;
+
+}
+
+#slide-kp.active {
+
+  width: 100%;
+
+  height: 100%;
+
+  padding: 30px;
+
+  opacity: 1;
+
+}
+
+  
+
+  h1,h5{
+
+    padding: 30px;
+
+    }
+
+  
+
+</style>
+
+</head>
+
+<body>
+
+  <div id="box_container"> 
+
+    <div class="card_yuan"></div>
+
+<div class="card_dl">
+
+  <p>登 录</p>
+
+  <form>
+
+    <input type="text" placeholder="请输入账号" id="username">
+
+    <input type="password" placeholder="请输入密码" id="password">
+
+    <button type="submit" id="loginBtn">登录</button>
+
+  </form>
+
+    <i id="yiyan">开心是一天,不开心也是,不如开心每一天。</i><!--这是随机一言-->
+
+</div>
+
+<div id="slide-kp">
+
+  <h1>登录功能维护中.</h1>
+
+  <h5>Login Error:Version too low!</h5>
+
+</div>
+
+  </div>
+
+  
+
+  
+
+   
+
+ 
+
+  
+
+  <script>
+
+const messageElement = document.getElementById("yiyan");
+
+const messages = [
+
+  "生命不止，继续跑下去。",
+
+  "每天都要向前一步。",
+
+  "人生没有彩排，只有现场直播。",
+
+  "开心是一天,不开心也是一天,不如开心每一天。",
+
+  "前方路途坎坷，但依旧前行。",
+
+  "别让梦想只停留在梦里。",
+
+  "昨天已经过去，明天尚未到来，今天就是一个好日子。",
+
+];
+
+function randomMessage() {
+
+  const index = Math.floor(Math.random() * messages.length);
+
+  messageElement.textContent = messages[index];
+
+}
+
+randomMessage(); 
+
+document.getElementById("loginBtn").addEventListener("click", function(event) {
+
+  event.preventDefault(); 
+
+  
+
+  const username = document.getElementById("username").value;
+
+  const password = document.getElementById("password").value;
+
+  
+
+  if (username === "Admin.lvka" && password === "123456") {
+
+    alert("登录成功.");
+
+    document.getElementById("slide-kp").classList.add("active"); 
+
+  } else {
+
+    alert("账号或密码错误,请重新输入.连接服务器失败:00746.");
+
+  }
+
+});
+
+const slidean = document.getElementById("slide-an");
+
+const slidekp = document.getElementById("slide-kp");
+
+slidean.addEventListener("click", function() {
+
+  slidekp.classList.add("active");
+
+});
+
+window.addEventListener("popstate", function(event) {
+
+  if (slidekp.classList.contains("active")) {
+
+    slidekp.classList.remove("active");
+
+    history.pushState(null, null, location.href);
+
+  }
+
+});
+
+history.pushState(null, null, location.href);
+
+  </script>
+
+</body>
+
+</html>
