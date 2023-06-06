@@ -69,7 +69,9 @@
       </style>
  </head>
  <body>
- <h2>只要不是白块，一个个点吧</h2>
+ <h2>别点白块</h2>
+ <h4>全服最高记录：19034</h4>
+ <h4>最高记录创建者：User124</h4>
     <div class="box">
     
       <!-- 布局 -->
@@ -180,7 +182,7 @@
   //关闭定时器
           clearInterval(obj.timer);
   //显示开始游戏
-          go.children[0].innerHTML = '失 败';
+          go.children[0].innerHTML = '你失误了';
           go.style.display = "block";
         }
   //盒子加速
@@ -200,7 +202,7 @@
   go.children[0].onclick = function(){
   //开始前判断main里面是否有盒子，有则全部删除
     if(main.children.length){
-  //暴力清楚main里面所有盒子
+  //暴力清除main里面所有盒子
         main.innerHTML = '';
       }
   //清空计分
