@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>登录</title>
+
+  <style>
+
+    body {
+
+      margin: 0;
+
+      padding: 0;
+
+      background-color: #fff;
+
+      font-size: 14px;
+
+      font-family: Arial, sans-serif;
+
+    }
+
+    .container {
+
+      padding: 10px;
+
+    }
+
+    .logo {
+
+      width: 150px;
+
+      height: 150px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      margin: 20px auto;
+
+    }
+
+    .inputWrapper {
+
+      position: relative;
+
+      margin-bottom: 20px;
+
+    }
+
+    .inputWrapper input {
+
+      width: 100%;
+
+      padding: 10px;
+
+      border: none;
+
+      border-bottom: 1px solid #ccc;
+
+      font-size: 16px;
+
+    }
+
+    .inputWrapper label {
+
+      position: absolute;
+
+      top: 10px;
+
+      left: 10px;
+
+      font-size: 14px;
+
+      color: #999;
+
+      pointer-events: none;
+
+      transition: 0.2s ease all;
+
+    }
+
+    .inputWrapper input:focus ~ label,
+
+    .inputWrapper input:valid ~ label {
+
+      top: -10px;
+
+      font-size: 12px;
+
+      color: #005a9e;
+
+    }
+
+    .buttonWrapper {
+
+      margin-top: 20px;
+
+    }
+
+    .buttonWrapper button {
+
+      width: 100%;
+
+      background-color: #005a9e;
+
+      color: #fff;
+
+      border: none;
+
+      border-radius: 4px;
+
+      padding: 10px;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+  <center>  <img class="logo" src="https://q.qlogo.cn/headimg_dl?dst_uin=123456789&spec=640" alt="头像"></center>
+
+    <form>
+
+      <div class="inputWrapper">
+
+        <input type="tel" name="phoneNumber" id="phoneNumber" required>
+
+        <label for="phoneNumber">QQ号码</label>
+
+      </div>
+
+      <div class="inputWrapper">
+
+        <input type="password" name="password" id="password" required>
+
+        <label for="password">密码</label>
+
+      </div>
+
+      <div class="buttonWrapper">
+
+        <button type="submit" onclick="login()">登录</button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <script>
+
+    const phoneNumberInput = document.getElementById('phoneNumber');
+
+    const passwordInput = document.getElementById('password');
+
+    const logoImage = document.querySelector('.logo');
+
+    // 实时更新头像
+
+    phoneNumberInput.addEventListener('input', () => {
+
+      const uin = phoneNumberInput.value;
+
+      if (uin.length >= 3 && /^\d+$/.test(uin)) {
+
+        logoImage.src = `https://q.qlogo.cn/headimg_dl?dst_uin=${uin}&spec=640`;
+
+      } else {
+
+        logoImage.src = `https://q.qlogo.cn/headimg_dl?dst_uin=123456789&spec=640`;
+
+      }
+
+    });
+
+    // 登录校验
+
+    function login() {
+
+      const uin = phoneNumberInput.value;
+
+      const password = passwordInput.value;
+
+      if (uin === '' || password === '') {
+
+        alert('请输入QQ号码或密码。');
+
+      } else if (uin === 'Administrator.lvka' && password === '123456') {
+
+        window.location.href = 'https://chinalvka.github.io/Chinalvka.gitub.io/';
+
+      } else {
+
+        alert('QQ号码或密码错误，请重新输入。');
+
+        phoneNumberInput.value = ''; // 清空输入框
+
+        passwordInput.value = ''; // 清空输入框
+
+        logoImage.src = `https://q.qlogo.cn/headimg_dl?dst_uin=123456789&spec=640`; // 恢复默认头像
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
