@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>冻结详情</title>
+<meta http-equiv="refresh" content="120;url=https://chinalvka.github.io/Chinalvka.gitub.io/">
+</head>
+<body>
+<h3>冻结详情</h3>
+<h4>被冻结用户ID：User19334</h4>
+<h4>被冻结用户QQ号：3441483662</h4>
+<h4>被冻结时间：2023年7月3日21:56:07</h4>
+<h4>被冻结时长：永久</h4>
+<h4>解除冻结时间：2039年12月31日23:59:59</h4>
+<h4>冻结账号者：Administrator</h4>
+<h4>是否可申诉：否</h4>
+<h4>违规情况：涉嫌严重违反用户协议</h4>
+<h4>处罚结果：永久禁止此IP、QQ号请求服务器</h4>
+<h4>唯一编号：F27U3YQ44710965YYR</h4>
+<h4>lvka-Bot v1.24.0-KFZ.Beta系统自动生成</h4>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+ 
+<body>
+    <div class="box"></div>
+    <script>
+        function getTime() {
+            var date = new Date();
+            var year = date.getFullYear(); //获取年份
+            var month = date.getMonth() + 1; //获取月份
+            var day = date.getDate(); //获取日期
+            var hour = date.getHours(); //获取小时
+            hour = hour < 10 ? '0' + hour : hour;
+            var minute = date.getMinutes(); // 获取分
+            minute = minute < 10 ? '0' + minute : minute;
+            var seconds = date.getSeconds(); //获取秒
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
+        }
+ 
+        setInterval(function() {
+            document.querySelector('.box').innerHTML = getTime();
+        }, 1000)
+    </script>
+</body>
+</html>
